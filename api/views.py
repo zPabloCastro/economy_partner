@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from economy_partner.models import Transaction
+from economy_partner.serializers import TransactionSerializer
+
+class TransactionListAPIView(generics.ListAPIView):
+    queryset = Transaction.objects.all()
+    serializer_class = TransactionSerializer
