@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from rest_framework import generics
 from django.contrib.auth.models import User
 
@@ -44,3 +45,8 @@ class TransactionDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Transaction.objects.all()
     serializer_class = TransactionSerializer
     # lookup_field = 'pk'
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> main
