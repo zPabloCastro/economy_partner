@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from decimal import Decimal
 
 from django.db import models
@@ -76,8 +75,3 @@ class Transaction(models.Model):
 @receiver(post_delete, sender=Transaction)
 def update_account_balance_on_delete(sender, instance, **kwargs):
     instance.account.update_balance()
-=======
-from django.db import models
-
-# Create your models here.
->>>>>>> main
