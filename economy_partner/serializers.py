@@ -9,6 +9,7 @@ class AccountSerializer(serializers.ModelSerializer):
             'id',
             'account_type',
             'name',
+            'initial_balance',
             'balance',
         ]
 
@@ -16,12 +17,11 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = [
+            'id',
             'name',
         ]
 
 class TransactionSerializer(serializers.ModelSerializer):
-    account = serializers.SerializerMethodField()
-    category = serializers.SerializerMethodField()
 
     class Meta:
         model = Transaction
@@ -34,9 +34,3 @@ class TransactionSerializer(serializers.ModelSerializer):
             'category',
             'description',
         ]
-        
-    def get_account(self, obj):
-        return str(obj.account)
-    
-    def get_category(self, obj):
-        return str(obj.category)
