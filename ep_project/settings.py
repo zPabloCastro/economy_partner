@@ -35,12 +35,9 @@ INSTALLED_APPS = [
     'economy_partner',
     'accounts',
     'api',
-<<<<<<< HEAD
     
     # Third apps.
     'rest_framework',
-=======
->>>>>>> main
 
     # Default apps.
     'django.contrib.admin',
