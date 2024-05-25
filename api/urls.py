@@ -1,6 +1,5 @@
 from django.urls import path
 
-<<<<<<< HEAD
 from . import views
 
 app_name = 'api'
@@ -22,9 +21,4 @@ urlpatterns = [
             name='transaction-list'),
     path('transaction/<int:pk>/', views.TransactionDetailAPIView.as_view(),
             name='transaction-detail'),
-=======
-app_name = 'api'
-urlpatterns = [
-    
->>>>>>> main
 ]
